@@ -31,6 +31,10 @@ const update_games_behind = function () {
   const games_behind_menu_element = document.getElementById("games_behind_select");
   if (games_behind_possible()) {
     games_behind_menu_element.classList.remove("hidden");
+    remove_games_behind();
+    if (games_behind_menu_element.classList.contains("selected")) {
+      show_games_behind();
+    }
   } else {
     games_behind_menu_element.classList.remove("selected");
     remove_games_behind();
